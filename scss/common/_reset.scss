@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	word-break: keep-all;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: 0;
+	background: none;
+}
+
+body {
+	font-family: 'Noto Sans KR';
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+// Form
+form {
+	.error {
+		font-size: 12px;
+		font-weight: 300;
+		color: #e30000;
+		margin: 5px 0 0 5px;
+	}
+}
+
+fieldset {
+	border: none;
+}
+
+input,
+label {
+	vertical-align: middle;
+}
+
+.h {
+	position: absolute;
+	top: -99999px;
+	opacity: 0;
+}

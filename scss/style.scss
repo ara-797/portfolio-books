@@ -1,3 +1,10 @@
+// variable
+$tablet: 999px;
+$mobile: 599px;
+$mainContainer: 1200px;
+$subContainer: 1200px;
+$responsePadding: 20px;
+
 // common
 @import 'common/reset';
 @import 'common/header';
