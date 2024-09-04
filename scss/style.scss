@@ -5,7 +5,21 @@ $mainContainer: 1200px;
 $subContainer: 1200px;
 $responsePadding: 20px;
 
+@mixin mainTitle($family: 'Noto Serif KR', $size: 34px, $weight: 900, $color: #333) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+@mixin mainSubTitle($size: 16px, $weight: 300, $line-height: 1.7, $color: #777) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	color: $color;
+}
+
 // common
 @import 'common/reset';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/fonts';
