@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Books</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
   <script defer type="module" src="js/mainVisual.js"></script>
 </head>
@@ -40,7 +42,74 @@
     </div>
   </header>
 
-  BOOKS. index
+  <!-- Main Visual -->
+  <section id="main-visual" class="my-scroll on">
+
+    <div class="bg-wrap">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="slide-wrap mainVisualSwiper">
+      <article id="visualPanel" class="panel swiper-wrapper">
+        <!-- <div class="swiper-slide">
+          <div class="detail-wrap">
+            <h1>The Case of the Poisonous Socks</h1>
+
+            <div class="rating-wrap">
+              <div class="star-box">
+                <span class="on"><i class="fa-solid fa-star"></i></span>
+                <span class="on"><i class="fa-solid fa-star"></i></span>
+                <span class="on"><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+              </div>
+              <p>3.0</p>
+            </div>
+
+            <p class="content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem deleniti velit nostrum
+              consequuntur in consectetur deserunt vitae libero maiores.
+            </p>
+
+            <button type="button" class="btn-more">VIEW DETAIL</button>
+          </div>
+
+          <div class="ratio-wrap">
+            <div class="double-wrap">
+
+              <div class="img-box origin">
+                <img src="img/example_book1.jpg" alt="">
+              </div>
+
+              <div class="img-box shadow">
+                <img src="img/example_book1.jpg" alt="">
+              </div>
+
+            </div>
+          </div>
+        </div> -->
+      </article>
+
+      <div class="indicator">
+        <div class="current-number">
+          <!-- <span>01</span> / 05 -->
+        </div>
+
+        <div class="btn-arrow">
+          <button type="button" id="btnPrevVisual">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button type="button" id="btnNextVisual">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- Footer -->
   <footer id="footer">
