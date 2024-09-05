@@ -1,13 +1,20 @@
 #header {
 	&.header-main {
 		width: 100%;
+		height: 70px;
 		position: fixed;
+		transition: all 0.3s;
 		z-index: 5;
+
+		&.scroll {
+			height: 58px;
+			background: rgba(255, 255, 255, 0.9);
+		}
 	}
 
 	.inner-header {
 		width: $mainContainer;
-		height: 70px;
+		height: 100%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
