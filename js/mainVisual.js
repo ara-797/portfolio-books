@@ -15,6 +15,25 @@ async function fetchListData(url) {
 	}
 }
 
+// 도서 상세 조회 (Books API)
+async function fetchDetailData(url) {
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log('detail data : ', data);
+	} catch (err) {
+		console.error('error : ', err);
+	}
+}
+
+// 이벤트 위임 - 도서 상세 팝업
+document.body.addEventListener('click', (e) => {
+	if (e.target.id === 'btnDetailVisual') {
+		const detailUrl = `https://www.googleapis.com/books/v1/volumes/${e.target.dataset.detail}`;
+		fetchDetailData(detailUrl);
+	}
+});
+
 // 도서 슬라이드 create DOM
 const visualPanel = document.querySelector('#visualPanel');
 const ratingList = [5, 4, 3];
@@ -56,10 +75,7 @@ function createDOM(arr) {
 
           <p class="content">${item.volumeInfo.description}</p>
 
-          <button type="button" 
-								id="btnDetailVisual" 
-								class="btn-more"
-								data-detail="${item.id}">
+          <button type="button" id="btnDetailVisual" class="btn-more" data-detail="${item.id}">
 						VIEW DETAIL
 					</button>
         </div>
