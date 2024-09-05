@@ -1,0 +1,34 @@
+{
+  "communityList": [
+    {
+      "profileImg": "example_user1.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
+      "name": "Sara Kim",
+      "date": "2023.06.17"
+    },
+    {
+      "profileImg": "example_user2.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
+      "name": "Emily Simpson",
+      "date": "2023.06.18"
+    },
+    {
+      "profileImg": "example_user3.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
+      "name": "Paul Davison",
+      "date": "2023.06.19"
+    },
+    {
+      "profileImg": "example_user1.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
+      "name": "Sara Kim",
+      "date": "2023.06.20"
+    },
+    {
+      "profileImg": "example_user3.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
+      "name": "Paul Davison",
+      "date": "2023.06.21"
+    }
+  ]
+}
