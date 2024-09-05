@@ -32,7 +32,7 @@ document.body.addEventListener('click', (e) => {
 		const detailUrl = `https://www.googleapis.com/books/v1/volumes/${e.target.dataset.detail}`;
 		fetchDetailData(detailUrl);
 	}
-	if (e.target.closest('.pop-close')) removePop();
+	if (e.target.closest('.pop-close.visual')) removePop();
 });
 
 // 도서 슬라이드 create DOM
@@ -126,7 +126,7 @@ function createPop(obj) {
 
 			</div>
 
-      <button type="button" class="pop-close">
+      <button type="button" class="pop-close visual">
         <i class="fa-solid fa-circle-xmark"></i>
       </button>
     </div>
