@@ -1,0 +1,163 @@
+.pop-wrap {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.4s;
+
+	&.on {
+		opacity: 1;
+	}
+
+	.inner-pop {
+		width: 1000px;
+		max-height: 85%;
+		background: #f7f7f7;
+		border-radius: 15px;
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+		position: relative;
+
+		.inner-content {
+			width: 100%;
+			height: 100%;
+			padding: 48px 20px 35px;
+
+			.media-box {
+				width: 100%;
+				position: relative;
+
+				&::before {
+					content: '';
+					display: block;
+					padding-top: 55%;
+				}
+
+				iframe,
+				video,
+				img {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					border: none;
+					object-fit: cover;
+				}
+
+				img {
+					object-fit: contain;
+				}
+			}
+
+			.inner-detail {
+				display: flex;
+				align-items: flex-start;
+
+				.img-box {
+					width: 150px;
+					margin-right: 35px;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.info-wrap {
+					flex: 1;
+					max-height: calc(100vh - 192px);
+					overflow: auto;
+
+					h1 {
+						font-family: 'Noto Serif KR';
+						font-size: 28px;
+						font-weight: 900;
+						color: #333;
+					}
+
+					h2 {
+						font-family: 'Noto Serif KR';
+						font-size: 18px;
+						color: #333;
+						margin: 5px 0 15px;
+					}
+
+					p,
+					.description {
+						font-size: 15px;
+						font-weight: 300;
+						line-height: 1.8;
+						color: #555;
+					}
+
+					.authors {
+						font-family: 'Noto Serif KR';
+						font-weight: 700;
+						color: #2ba9a9;
+					}
+
+					.description {
+						margin: 25px 0;
+					}
+				}
+			}
+		}
+
+		.pop-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 28px;
+			color: #4eb3b3;
+			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.pop-wrap {
+		padding: 0 15px;
+
+		.inner-pop {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.pop-wrap {
+		.inner-pop {
+			.inner-content {
+				padding: 48px 15px 35px;
+
+				.inner-detail {
+					.img-box {
+						width: 80px;
+						margin-right: 20px;
+					}
+
+					.info-wrap {
+						h1 {
+							font-size: 20px;
+						}
+						h2 {
+							font-size: 15px;
+						}
+						p,
+						.description {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

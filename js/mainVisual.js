@@ -20,7 +20,7 @@ async function fetchDetailData(url) {
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log('detail data : ', data);
+		createPop(data.volumeInfo);
 	} catch (err) {
 		console.error('error : ', err);
 	}
@@ -32,6 +32,7 @@ document.body.addEventListener('click', (e) => {
 		const detailUrl = `https://www.googleapis.com/books/v1/volumes/${e.target.dataset.detail}`;
 		fetchDetailData(detailUrl);
 	}
+	if (e.target.closest('.pop-close')) removePop();
 });
 
 // 도서 슬라이드 create DOM
@@ -98,6 +99,60 @@ function createDOM(arr) {
 
 		visualPanel.innerHTML = tags;
 	});
+}
+
+// 도서 상세 create popup
+function createPop(obj) {
+	const tags = `
+		<div class="inner-pop">
+      <div class="inner-content">
+
+				<div class="inner-detail">
+					<div class="img-box">
+						<img src="${obj.imageLinks.small.replace('edge=curl', 'edge=')}">
+					</div>
+					
+					<div class="info-wrap">
+						<h1>${obj.title}</h1>
+						<h2>${obj.subtitle ? obj.subtitle : ''}</h2>
+						
+						<p class="authors">작가 : ${obj.authors}</p>
+						<div class="description">${obj.description}</div>
+						<p>카테고리 : ${obj.categories}</p>
+						<p>출판사 : ${obj.publisher}</p>
+						<p>출판일 : ${obj.publishedDate}</p>
+					</div>
+				</div>
+
+			</div>
+
+      <button type="button" class="pop-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+	`;
+
+	const pop = document.createElement('aside');
+	pop.className = 'pop-wrap';
+	pop.innerHTML = tags;
+	document.body.append(pop);
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').classList.add('on');
+	}, 0);
+
+	document.body.style.overflow = 'hidden';
+}
+
+// popup 제거
+function removePop() {
+	document.querySelector('.pop-wrap').classList.remove('on');
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').remove();
+	}, 400);
+
+	document.body.style.overflow = 'auto';
 }
 
 // Swiper Slide
