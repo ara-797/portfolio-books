@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
   <script defer type="module" src="js/mainVisual.js"></script>
+  <script defer type="module" src="js/mainBookList.js"></script>
 </head>
 
 <body>
@@ -109,6 +110,44 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- Book List -->
+  <section id="main-book-list" class="my-scroll">
+    <div class="inner-container">
+
+      <div class="title-wrap">
+        <h1>Best Seller Books.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, exercitationem.</p>
+
+        <div class="arrow">
+          <button type="button" id="btnPrevBook" class="prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button type="button" id="btnNextBook" class="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide-wrap bookListSwiper">
+        <article id="bookListPanel" class="panel swiper-wrapper">
+          <!-- <div class="swiper-slide">
+            <div class="ratio-wrap">
+              <div class="img-box">
+                <img src="img/example_book4.jpg" alt="">
+              </div>
+            </div>
+
+            <div class="info-box">
+              <h2>Book Name</h2>
+              <p>William H. Brock</p>
+            </div>
+          </div> -->
+        </article>
+      </div>
+
+    </div>
   </section>
 
   <!-- Footer -->
