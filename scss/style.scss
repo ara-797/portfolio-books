@@ -26,5 +26,7 @@ $responsePadding: 20px;
 @import 'common/pop';
 
 // main
+@import 'main/scrollNavi';
 @import 'main/visual';
 @import 'main/bookList';
+@import 'main/gallery';
