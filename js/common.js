@@ -7,9 +7,28 @@ window.addEventListener('scroll', () => {
 
 	eventBlocker = setTimeout(() => {
 		headerScrollActive();
+		topActive();
 		eventBlocker = null;
 	}, speed);
 });
+
+// Top Button
+const btnTop = document.querySelector('#btnTop');
+
+btnTop.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+function topActive() {
+	const scroll = window.scrollY;
+	const limit = window.innerHeight / 2;
+
+	if (scroll > limit) {
+		btnTop.classList.add('on');
+	} else {
+		btnTop.classList.remove('on');
+	}
+}
 
 // Header Scroll
 const header = document.querySelector('#header');
