@@ -1,6 +1,8 @@
 #footer {
+	position: relative;
 	background: #444;
 	padding: 50px 0;
+	z-index: 4;
 
 	.inner-footer {
 		width: $mainContainer;

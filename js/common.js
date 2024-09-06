@@ -20,3 +20,13 @@ function headerScrollActive() {
 	if (scroll > limit) header.classList.add('scroll');
 	else header.classList.remove('scroll');
 }
+
+// 이벤트 위임 - Mobile Menu
+document.body.addEventListener('click', (e) => {
+	if (e.target.closest('.btn-menu')) {
+		document.querySelector('.mobile-menu').classList.add('on');
+	}
+	if (e.target.closest('.menu-close')) {
+		document.querySelector('.mobile-menu').classList.remove('on');
+	}
+});
