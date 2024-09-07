@@ -1,0 +1,108 @@
+{
+  "location": [
+    {
+      "title": "국회도서관",
+      "address": "서울특별시 영등포구 의사당대로 1",
+      "website": {
+        "title": "nanet.go.kr",
+        "link": "https://www.nanet.go.kr/main.do"
+      },
+      "phone": "02-6788-4211",
+      "position": [
+        37.531117,
+        126.917035
+      ],
+      "imgSrc": "location-pin.png",
+      "imgSize": [
+        50,
+        50
+      ],
+      "imgOption": {
+        "offset": [
+          25,
+          50
+        ]
+      },
+      "thumbnailSrc": "",
+      "description": "국회는 국회의 도서 및 입법자료에 관한 업무를 처리하기 위하여 국회도서관을 두며, 국회도서관에는 국회도서관장 1인과 기타 필요한 공무원을 둔다. 국회도서관은 국회법에 설치근거를 두고 국회도서관법과 그 부속법규에 따라 설치되었다."
+    },
+    {
+      "title": "남산도서관",
+      "address": "서울특별시 용산구 소월로 109",
+      "website": {
+        "title": "nslib.sen.go.kr",
+        "link": "http://nslib.sen.go.kr/nslib_index.jsp"
+      },
+      "phone": "02-754-7338",
+      "position": [
+        37.552923,
+        126.981457
+      ],
+      "imgSrc": "location-pin.png",
+      "imgSize": [
+        50,
+        50
+      ],
+      "imgOption": {
+        "offset": [
+          25,
+          50
+        ]
+      },
+      "thumbnailSrc": "example_library2.jpg",
+      "description": "남산도서관은 서울시 용산구 후암동에 있는 서울시교육청 산하 도서관이다. 남산 자락에 있다고 이름도 남산도서관이라 하였다. 도서관이니 당연히 책을 빌려 읽는 장소지만 열람실ㆍ전자정보실ㆍ노트북실 등 편의시설을 갖추고, 정기적으로 강의와 전시회를 여는 등 문화시설로서도 역할을 한다."
+    },
+    {
+      "title": "별마당 도서관",
+      "address": "서울특별시 강남구 영동대로 513 스타필드 코엑스몰 B1",
+      "website": {
+        "title": "starfield.co.kr",
+        "link": "https://www.starfield.co.kr/coexmall/starfieldLibrary/library.do"
+      },
+      "phone": "02-6002-3031",
+      "position": [
+        37.50999,
+        127.059986
+      ],
+      "imgSrc": "location-pin.png",
+      "imgSize": [
+        50,
+        50
+      ],
+      "imgOption": {
+        "offset": [
+          25,
+          50
+        ]
+      },
+      "thumbnailSrc": "example_library3.jpg",
+      "description": "별마당도서관은 스타필드 코엑스몰내에 있는 도서관이다. 다른 스타필드에는 별마당도서관이 아닌 별마당 키즈로 꾸며 놓아서 아이들의 책이 있다. 신세계그룹은 랜드마크 목적 등으로 약 60억원을 투자해 2017년 5월 31일 ‘별마당도서관’을 개장하였다."
+    },
+    {
+      "title": "국립중앙도서관",
+      "address": "서울특별시 서초구 반포대로 201",
+      "website": {
+        "title": "nl.go.kr",
+        "link": "https://www.nl.go.kr/"
+      },
+      "phone": "02-535-4142",
+      "position": [
+        37.497669,
+        127.002837
+      ],
+      "imgSrc": "location-pin.png",
+      "imgSize": [
+        50,
+        50
+      ],
+      "imgOption": {
+        "offset": [
+          25,
+          50
+        ]
+      },
+      "thumbnailSrc": "",
+      "description": "국립중앙도서관은 대한민국의 국가대표도서관 역할을 수행하는 국립도서관으로 한국을 대표하는 도서관이다. 사서들 사이에서는 '국중도'나 '국중'이라는 줄임말로 불린다. 행정조직법상으로는 문화체육관광부에 소속된 기관이다."
+    }
+  ]
+}

@@ -7,9 +7,11 @@
   <title>BOOKS. Location</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a7794af5775afa1c6ab6e18677acb2c"></script>
 
   <script defer type="module" src="js/common/common.js"></script>
   <script defer type="module" src="js/common/subCommon.js"></script>
+  <script defer type="module" src="js/sub/location.js"></script>
 </head>
 
 <body>
@@ -69,7 +71,7 @@
   </nav>
 
   <!-- Sub Content -->
-  <section class="sub-content location">
+  <section class="sub-content sub-location">
 
     <div class="sub-visual">
       <figure>
@@ -83,7 +85,87 @@
     </div>
 
     <div class='sub-inner'>
-      Location Contents
+      <div class="library-wrap">
+        <div class="inner-container">
+
+          <div class="map-wrap">
+            <div id="map"></div>
+
+            <ul class="list-branch">
+              <li class="on">국회도서관</li>
+              <li>남산도서관</li>
+              <li>별마당 도서관</li>
+              <li>국립중앙도서관</li>
+            </ul>
+
+            <button type="button" class="btn-traffic">
+              교통정보 OFF
+            </button>
+          </div>
+
+          <div class="library-info">
+
+            <div id="infoWrap" class="inner-box">
+              <!-- <h2>국회도서관</h2>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p>서울특별시 영등포구 의사당대로 1</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-globe"></i>
+                  <p>
+                    <a href="https://www.nanet.go.kr/main.do" target="_blank">
+                      nanet.go.kr
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>02-6788-4211</p>
+                </li>
+              </ul>
+              <div class="sns-wrap">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </div> -->
+            </div>
+
+            <div class="contact-wrap">
+              <h2>Contact Us.</h2>
+
+              <form action="" method="get" id="formContact" class="form-contact">
+                <input type="hidden" name="contact_number">
+
+                <!-- user name -->
+                <div class="input-box">
+                  <label for="username" class="tit">Name</label>
+                  <input type="text" name="username" id="username" placeholder="이름을 입력하세요.">
+                </div>
+
+                <!-- user email -->
+                <div class="input-box">
+                  <label for="email" class="tit">E-mail</label>
+                  <input type="email" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+                </div>
+
+                <!-- message -->
+                <div class="input-box msg-box">
+                  <label for="message" class="tit">Message</label>
+                  <textarea name="message" id="message" placeholder="문의사항을 입력하세요."></textarea>
+                </div>
+
+                <div class="btn-wrap">
+                  <input type="submit" value="SEND">
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
   </section>

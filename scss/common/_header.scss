@@ -13,6 +13,9 @@
 
 		&.sub {
 			position: relative;
+			&.scroll {
+				height: 70px;
+			}
 		}
 	}
 
