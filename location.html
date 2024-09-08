@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a7794af5775afa1c6ab6e18677acb2c"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <script defer type="module" src="js/common/common.js"></script>
   <script defer type="module" src="js/common/subCommon.js"></script>
+  <script defer type="module" src="js/common/form.js"></script>
   <script defer type="module" src="js/sub/location.js"></script>
+  <script defer type="module" src="js/sub/contact.js"></script>
 </head>
 
 <body>
@@ -142,18 +145,21 @@
                 <div class="input-box">
                   <label for="username" class="tit">Name</label>
                   <input type="text" name="username" id="username" placeholder="이름을 입력하세요.">
+                  <!-- <p class="error">이름은 2글자 이상 입력하세요.</p> -->
                 </div>
 
                 <!-- user email -->
                 <div class="input-box">
                   <label for="email" class="tit">E-mail</label>
-                  <input type="email" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+                  <!-- <p class="error">이메일주소는 @를 포함하여 입력하세요.</p> -->
                 </div>
 
                 <!-- message -->
                 <div class="input-box msg-box">
                   <label for="message" class="tit">Message</label>
                   <textarea name="message" id="message" placeholder="문의사항을 입력하세요."></textarea>
+                  <!-- <p class="error">문의사항은 5글자 이상 입력하세요.</p> -->
                 </div>
 
                 <div class="btn-wrap">
