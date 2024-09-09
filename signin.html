@@ -14,7 +14,7 @@
 <body>
 
   <!-- Header -->
-  <header id="header" class="header-main">
+  <header id="header" class="header-main sub">
     <div class="inner-header">
 
       <h1>
@@ -67,7 +67,40 @@
     </div>
   </nav>
 
-  BOOKS. Signin
+  <!-- Signin Content -->
+  <section class="sign-in">
+    <div class="inner-container">
+      <div class="signin-box">
+        <div class="top-wrap">
+          <h1>Sign In</h1>
+        </div>
+
+        <form action="" method="get" id="formSignin" class="form-signin">
+          <fieldset>
+            <legend class="h">로그인 form 입력 항목</legend>
+
+            <!-- user email -->
+            <div class="input-box">
+              <label for="email" class="tit">E-mail</label>
+              <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+            </div>
+
+            <!-- password -->
+            <div class="input-box">
+              <label for="pwd" class="tit">Password</label>
+              <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요.">
+            </div>
+
+            <div class="btn-wrap">
+              <input type="submit" value="SIGN IN">
+              <a href="signup.html">SIGN UP</a>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- Top Button -->
   <button type="button" id="btnTop" class="btn-top">
