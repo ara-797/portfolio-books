@@ -25,7 +25,7 @@ btns.forEach((btn, idx) => {
 
 // 메인 페이지 Section Scroll
 const sections = document.querySelectorAll('.my-scroll');
-const baseline = -200;
+const baseline = -window.innerHeight / 2;
 
 function activation() {
 	const scroll = window.scrollY;

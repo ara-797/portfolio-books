@@ -1,2 +1,4 @@
 // Sub Visual
-document.querySelector('.sub-content').classList.add('on');
+setTimeout(() => {
+	document.querySelector('.sub-content').classList.add('on');
+}, 100);
