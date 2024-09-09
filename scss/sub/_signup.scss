@@ -9,6 +9,12 @@
 		justify-content: center;
 		align-items: flex-start;
 
+		opacity: 0;
+		transform: translateY(130px);
+		transition-property: opacity, transform;
+		transition-duration: 0.5s;
+		transition-delay: 0.2s;
+
 		.desc-wrap {
 			width: 480px;
 			padding-top: 35px;
@@ -271,6 +277,13 @@
 				}
 			}
 		}
+	}
+}
+
+.sign-up.on {
+	.inner-container {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 

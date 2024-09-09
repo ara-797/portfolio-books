@@ -8,6 +8,12 @@
 		display: flex;
 		justify-content: center;
 
+		opacity: 0;
+		transform: translateY(130px);
+		transition-property: opacity, transform;
+		transition-duration: 0.5s;
+		transition-delay: 0.2s;
+
 		.signin-box {
 			width: 500px;
 			background: #fff;
@@ -89,6 +95,13 @@
 				}
 			}
 		}
+	}
+}
+
+.sign-in.on {
+	.inner-container {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
