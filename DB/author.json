@@ -1,0 +1,51 @@
+{
+  "members": [
+    {
+      "name": "Julia Jung",
+      "genre": "novel",
+      "picture": "member1.jpg"
+    },
+    {
+      "name": "Paul Davison",
+      "genre": "novel",
+      "picture": "member2.jpg"
+    },
+    {
+      "name": "David Choi",
+      "genre": "mystery",
+      "picture": "member3.jpg"
+    },
+    {
+      "name": "Emily Simpson",
+      "genre": "mystery",
+      "picture": "member4.jpg"
+    },
+    {
+      "name": "Sara Kim",
+      "genre": "humanities",
+      "picture": "member5.jpg"
+    },
+    {
+      "name": "Michael",
+      "genre": "essay",
+      "picture": "member6.jpg"
+    },
+    {
+      "name": "Brian",
+      "genre": "essay",
+      "picture": "member7.jpg"
+    }
+  ],
+  "directors": [
+    {
+      "name": "Julia Jung",
+      "genre": "novel",
+      "picture": "member1.jpg"
+    },
+    {
+      "name": "David Choi",
+      "genre": "mystery",
+      "picture": "member3.jpg"
+    }
+  ]
+}

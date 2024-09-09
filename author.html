@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOOKS. Author</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/57de64ccd3.js" crossorigin="anonymous"></script>
 
   <script defer type="module" src="js/common/common.js"></script>
   <script defer type="module" src="js/common/subCommon.js"></script>
+  <script defer type="module" src="js/sub/author.js"></script>
 </head>
 
 <body>
@@ -69,7 +72,7 @@
   </nav>
 
   <!-- Sub Content -->
-  <section class="sub-content author">
+  <section class="sub-content sub-author">
 
     <div class="sub-visual">
       <figure>
@@ -83,7 +86,74 @@
     </div>
 
     <div class='sub-inner'>
-      Author Contents
+      <div class="intro-wrap">
+        <div id="directorsWrap" class="img-wrap">
+          <!-- <article>
+            <div class="img-box">
+              <img src="" alt="">
+            </div>
+            <div class="info-box">
+              <p class="name">Name</p>
+              <p>Genre</p>
+            </div>
+          </article> -->
+        </div>
+
+        <div class="inner-wrap">
+          <h2>Creative Directors</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus saepe iure aspernatur dicta repellendus cum
+            nihil aliquid, minus quod! Maxime.</p>
+
+          <ul>
+            <li>
+              <h3>Lorem ipsum dolor sit.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dolore?</p>
+            </li>
+            <li>
+              <h3>Lorem ipsum dolor sit.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dolore?</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="intro-person">
+
+        <div class="tab membersSwiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide" data-key="novel">NOVEL</li>
+            <li class="swiper-slide" data-key="mystery">MYSTERY</li>
+            <li class="swiper-slide" data-key="humanities">HUMANITIES</li>
+            <li class="swiper-slide" data-key="essay">ESSAY</li>
+          </ul>
+        </div>
+
+        <div class="inner-person">
+          <div class="inner-container">
+            <div class="left">
+              <p>Creative Members</p>
+              <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. voluptas nesciunt!</h2>
+
+              <a href="location.html" class="btn-more">
+                <i class="fa-regular fa-circle-play"></i>
+                MORE VIEW
+              </a>
+            </div>
+
+            <div id="membersWrap" class="person-wrap">
+              <!-- <article>
+                <div class="img-box">
+                  <img src="" alt="">
+                </div>
+                <div class="info-box">
+                  <p class="name">Name</p>
+                  <p>Genre</p>
+                </div>
+              </article> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </section>
