@@ -14,7 +14,7 @@
 <body>
 
   <!-- Header -->
-  <header id="header" class="header-main">
+  <header id="header" class="header-main sub">
     <div class="inner-header">
 
       <h1>
@@ -67,7 +67,157 @@
     </div>
   </nav>
 
-  BOOKS. Signup
+  <!-- Signup Content -->
+  <section class="sign-up">
+    <div class="inner-container">
+      <div class="desc-wrap">
+        <div class="title-wrap">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </h2>
+          <p>
+            <span>DETAIL DESCRIPTION</span>
+          </p>
+        </div>
+
+        <div class="change-wrap">
+          <ul class="guideListWrap">
+            <li>회원가입을 위한 입력 항목입니다.</li>
+            <li>입력 항목에 커서를 올리면 안내사항이 표시됩니다.</li>
+          </ul>
+        </div>
+
+        <ul class="list-notice">
+          <li>
+            <i class="fa-brands fa-optin-monster"></i>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolores perferendis asperiores.
+            </p>
+          </li>
+          <li>
+            <i class="fa-brands fa-earlybirds"></i>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolores perferendis asperiores.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="signup-box">
+
+        <div class="top-wrap">
+          <h1>Create Account</h1>
+
+          <div class="sns-wrap">
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-google-plus-g"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <p>or use your email for registration:</p>
+        </div>
+
+        <form action="" method="get" id="formSignup" class="form-signup">
+          <fieldset>
+            <legend class="h">회원가입 form 입력 항목</legend>
+
+            <!-- user email -->
+            <div class="input-box">
+              <label for="email" class="tit">E-mail</label>
+              <input type="text" name="email" id="email" placeholder="이메일 주소를 입력하세요.">
+            </div>
+
+            <!-- password -->
+            <div class="input-box">
+              <label for="pwd1" class="tit">Password</label>
+              <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
+            </div>
+
+            <div class="input-box">
+              <label for="pwd2" class="tit">Re Passsword</label>
+              <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재 입력하세요.">
+            </div>
+
+            <!-- library -->
+            <div class="input-box">
+              <label for="library" class="tit">Library</label>
+
+              <select name="library" id="library">
+                <option value="">방문하고 싶은 도서관을 선택하세요.</option>
+                <option value="library01">국회도서관</option>
+                <option value="library02">남산도서관</option>
+                <option value="library03">별마당 도서관</option>
+                <option value="library04">국립중앙도서관</option>
+              </select>
+            </div>
+
+            <!-- gender -->
+            <div class="input-box">
+              <p class="tit">Gender</p>
+
+              <div class="radio-wrap">
+                <div>
+                  <input type="radio" name="gender" id="male" value="male">
+                  <label for="male">Male</label>
+                </div>
+
+                <div>
+                  <input type="radio" name="gender" id="female" value="female">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- interest -->
+            <div class="input-box">
+              <p class="tit">Interest</p>
+
+              <div class="check-wrap">
+                <div>
+                  <input type="checkbox" name="genre" id="novel" value="novel">
+                  <label for="novel">Novel</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="genre" id="mystery" value="mystery">
+                  <label for="mystery">Mystery</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="genre" id="humanities" value="humanities">
+                  <label for="humanities">Humanities</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" name="genre" id="essay" value="essay">
+                  <label for="essay">Essay</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- memo -->
+            <div class="input-box">
+              <label for="memo" class="tit">Memo</label>
+              <textarea name="memo" id="memo" cols="30" rows="7" placeholder="메모를 입력하세요."></textarea>
+            </div>
+
+            <div class="btn-wrap">
+              <input type="reset" value="RESET">
+              <input type="submit" value="SIGN UP">
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Top Button -->
   <button type="button" id="btnTop" class="btn-top">
