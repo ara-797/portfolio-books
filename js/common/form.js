@@ -30,6 +30,19 @@ function signupValidate() {
 	});
 }
 
+// Signin Form
+const formSignin = document.querySelector('#formSignin');
+formSignin && signinValidate();
+
+function signinValidate() {
+	const btnSend = formSignin.querySelector('input[type=submit]');
+
+	btnSend.addEventListener('click', (e) => {
+		if (!isEmail(formSignin, 'email')) e.preventDefault();
+		if (!isPassword(formSignin, 'pwd', 5)) e.preventDefault();
+	});
+}
+
 // [Text Validation]
 function isText(form, name, length, errMsg) {
 	const input = form.querySelector(`[name=${name}]`);
