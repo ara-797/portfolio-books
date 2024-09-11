@@ -43,6 +43,27 @@ function signinValidate() {
 	});
 }
 
+// Community input Form
+const formCommunityInput = document.querySelector('#formCommunityInput');
+formCommunityInput && communityInputValidate();
+
+function communityInputValidate() {
+	const btnSend = formCommunityInput.querySelector('input[type=submit]');
+
+	btnSend.addEventListener('click', (e) => {
+		e.validate = true;
+
+		if (!isText(formCommunityInput, 'bookname', 1, '도서명을 입력하세요.')) {
+			e.preventDefault();
+			e.validate = false;
+		}
+		if (!isText(formCommunityInput, 'content', 1, '도서에 관련된 내용을 자유롭게 작성하세요.')) {
+			e.preventDefault();
+			e.validate = false;
+		}
+	});
+}
+
 // [Text Validation]
 function isText(form, name, length, errMsg) {
 	const input = form.querySelector(`[name=${name}]`);
