@@ -1,0 +1,249 @@
+.sub-community {
+	.review-wrap {
+		padding: 100px 0 120px;
+
+		.inner-container {
+			width: $subContainer;
+			margin: 0 auto;
+			display: flex;
+			align-items: flex-start;
+
+			.input-box {
+				&:not(:first-child) {
+					margin-top: 20px;
+				}
+
+				.tit {
+					display: block;
+					font-size: 14px;
+					color: #999;
+					margin-bottom: 7px;
+				}
+
+				input[type='text'],
+				textarea {
+					width: 100%;
+					height: 50px;
+					background: #f7f7f7;
+					padding: 0 15px;
+					border: none;
+					outline: none;
+					font-family: 'Noto Sans KR';
+					font-size: 14px;
+					color: #333;
+
+					&::placeholder {
+						font-size: 13px;
+						color: #bfbfbf;
+					}
+				}
+
+				textarea {
+					height: 100px;
+					padding: 15px;
+					resize: none;
+				}
+			}
+
+			.input-wrap {
+				width: 450px;
+				padding-top: 20px;
+				margin-right: 50px;
+				position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+
+				.btn-wrap {
+					display: flex;
+					align-items: center;
+					margin-top: 20px;
+
+					input {
+						flex: 1;
+						height: 45px;
+						font-size: 14px;
+						font-weight: 300;
+						line-height: 45px;
+						color: #fff;
+						border: none;
+						background: #444;
+						cursor: pointer;
+
+						&:not(:first-child) {
+							margin-left: 10px;
+						}
+
+						&.btn-write {
+							background: #4eb3b3;
+						}
+					}
+				}
+			}
+
+			.show-wrap {
+				flex: 1;
+				background: #f7f7f7;
+				border-radius: 15px;
+				padding: 30px;
+
+				.no-items {
+					font-size: 16px;
+					color: #333;
+					text-align: center;
+				}
+
+				article {
+					background: #fff;
+					border-radius: 10px;
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+					padding: 25px 30px;
+
+					&:not(:first-child) {
+						margin-top: 30px;
+					}
+
+					h2 {
+						font-family: 'Noto Serif KR';
+						font-size: 22px;
+						font-weight: 900;
+						color: #333;
+						margin-bottom: 15px;
+					}
+
+					p {
+						font-size: 15px;
+						font-weight: 300;
+						line-height: 1.5;
+						color: #777;
+						white-space: pre-line;
+
+						&.user {
+							font-weight: 700;
+							color: #333;
+						}
+					}
+
+					.info-wrap {
+						display: flex;
+						align-items: center;
+						margin-top: 30px;
+
+						.profile-box {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 50px;
+							height: 50px;
+							background: #ffbd45;
+							border-radius: 50%;
+							overflow: hidden;
+							margin-right: 15px;
+							font-size: 16px;
+							color: #333;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+						}
+
+						.info-box {
+							flex: 1;
+						}
+					}
+
+					.btn-wrap {
+						display: flex;
+						justify-content: flex-end;
+						align-items: center;
+						margin-top: 20px;
+
+						input {
+							font-size: 14px;
+							color: orange;
+							cursor: pointer;
+
+							&:not(:first-child) {
+								margin-left: 20px;
+							}
+
+							&.btn-update {
+								color: #2ba9a9;
+							}
+
+							&.btn-delete {
+								color: #ca3034;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $subContainer) {
+	.sub-community {
+		.review-wrap {
+			.inner-container {
+				width: 100%;
+				padding: 0 $responsePadding;
+
+				.input-wrap {
+					flex: 1;
+					width: auto;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.sub-community {
+		.review-wrap {
+			.inner-container {
+				display: block;
+
+				.input-wrap {
+					margin-right: 0;
+					margin-bottom: 50px;
+					position: relative;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.sub-community {
+		.review-wrap {
+			.inner-container {
+				.show-wrap {
+					padding: 20px;
+
+					article {
+						padding: 20px;
+
+						h2 {
+							font-size: 18px;
+						}
+
+						p {
+							font-size: 14px;
+						}
+
+						.info-wrap {
+							.profile-box {
+								width: 37px;
+								height: 37px;
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

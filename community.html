@@ -69,7 +69,7 @@
   </nav>
 
   <!-- Sub Content -->
-  <section class="sub-content community">
+  <section class="sub-content sub-community">
 
     <div class="sub-visual">
       <figure>
@@ -82,8 +82,83 @@
       </div>
     </div>
 
-    <div class='sub-inner'>
-      Community Contents
+    <div class="sub-inner">
+      <div class="review-wrap">
+        <div class="inner-container">
+
+          <!-- input 영역 -->
+          <div class="input-wrap">
+            <form action="" method="get" id="formCommunityInput">
+              <fieldset>
+                <legend class="h">Community form 입력 항목</legend>
+
+                <!-- book name -->
+                <div class="input-box required">
+                  <label for="bookname" class="tit">Book Name</label>
+                  <input type="text" name="bookname" id="bookname" placeholder="도서명을 입력하세요." />
+                </div>
+
+                <!-- review content -->
+                <div class="input-box required">
+                  <label for="content" class="tit">Review Content</label>
+                  <textarea name="content" id="content" placeholder="도서에 관련된 내용을 자유롭게 작성하세요."></textarea>
+                </div>
+
+                <div class="btn-wrap">
+                  <input type="reset" value="RESET">
+                  <input type="submit" value="WRITE" class="btn-write">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <!-- list 영역 -->
+          <div class="show-wrap">
+            <!-- <p class="no-items">등록된 리뷰가 없습니다.</p> -->
+
+            <article>
+              <h2>Book Name</h2>
+              <p>Review Content</p>
+
+              <div class="info-wrap">
+                <div class="profile-box">
+                  <img src="assets/images/community/example_user1.jpg" alt="">
+                </div>
+                <div class="info-box">
+                  <p class="user">User Name</p>
+                  <p>2024.09.11</p>
+                </div>
+              </div>
+
+              <div class="btn-wrap">
+                <input type="button" value="EDIT">
+                <input type="button" value="DELETE" class="btn-delete">
+              </div>
+
+              <!-- 수정 form -->
+              <!-- <form action="" method="get" id="formCommunityUpdate">
+                <fieldset>
+                  <legend class="h">Community form 수정 항목</legend>
+
+                  <div class="input-box">
+                    <input type="text" name="booknameUpdate" id="booknameUpdate" placeholder="도서명을 입력하세요." />
+                  </div>
+                  <div class="input-box">
+                    <textarea name="contentUpdate" id="contentUpdate" placeholder="도서에 관련된 내용을 자유롭게 작성하세요."></textarea>
+                  </div>
+
+                  <div class="btn-wrap">
+                    <input type="button" value="CANCEL">
+                    <input type="submit" value="UPDATE" class="btn-update">
+                  </div>
+                </fieldset>
+              </form> -->
+
+            </article>
+          </div>
+
+        </div>
+      </div>
     </div>
 
   </section>

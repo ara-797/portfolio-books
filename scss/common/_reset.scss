@@ -15,7 +15,9 @@ a {
 	text-decoration: none;
 }
 
-button {
+button,
+input[type='button'],
+input[type='submit'] {
 	border: 0;
 	background: none;
 }
