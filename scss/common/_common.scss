@@ -1,0 +1,11 @@
+// Form 필수항목
+.required {
+	.tit {
+		&::before {
+			content: '*';
+			font-size: 15px;
+			color: #e30000;
+			margin-right: 5px;
+		}
+	}
+}
