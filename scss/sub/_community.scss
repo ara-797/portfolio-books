@@ -178,6 +178,19 @@
 							}
 						}
 					}
+
+					&.edit {
+						.detail-wrap {
+							display: none;
+						}
+						.form-community-update {
+							display: block;
+						}
+					}
+
+					.form-community-update {
+						display: none;
+					}
 				}
 			}
 		}
