@@ -119,43 +119,46 @@
             <!-- <p class="no-items">등록된 리뷰가 없습니다.</p> -->
 
             <article>
-              <h2>Book Name</h2>
-              <p>Review Content</p>
+              <!-- 리뷰 상세 -->
+              <div class="detail-wrap">
+                <h2>Book Name</h2>
+                <p>Review Content</p>
 
-              <div class="info-wrap">
-                <div class="profile-box">
-                  <img src="assets/images/community/example_user1.jpg" alt="">
+                <div class="info-wrap">
+                  <div class="profile-box">
+                    <img src="assets/images/community/example_user1.jpg" alt="">
+                  </div>
+                  <div class="info-box">
+                    <p class="user">User Name</p>
+                    <p>2024.09.11</p>
+                  </div>
                 </div>
-                <div class="info-box">
-                  <p class="user">User Name</p>
-                  <p>2024.09.11</p>
-                </div>
-              </div>
 
-              <div class="btn-wrap">
-                <input type="button" value="EDIT">
-                <input type="button" value="DELETE" class="btn-delete">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-review-edit">EDIT</button>
+                  <button type="button" class="btn-review-delete">DELETE</button>
+                </div>
               </div>
 
               <!-- 수정 form -->
-              <!-- <form action="" method="get" id="formCommunityUpdate">
+              <form action="" method="get" class="form-community-update">
                 <fieldset>
                   <legend class="h">Community form 수정 항목</legend>
 
                   <div class="input-box">
-                    <input type="text" name="booknameUpdate" id="booknameUpdate" placeholder="도서명을 입력하세요." />
+                    <input type="text" name="booknameUpdate" class="book-name-update" placeholder="도서명을 입력하세요." />
                   </div>
                   <div class="input-box">
-                    <textarea name="contentUpdate" id="contentUpdate" placeholder="도서에 관련된 내용을 자유롭게 작성하세요."></textarea>
+                    <textarea name="contentUpdate" class="content-update"
+                      placeholder="도서에 관련된 내용을 자유롭게 작성하세요."></textarea>
                   </div>
 
                   <div class="btn-wrap">
-                    <input type="button" value="CANCEL">
-                    <input type="submit" value="UPDATE" class="btn-update">
+                    <button type="button" class="btn-review-cancel">CANCEL</button>
+                    <input type="submit" class="btn-review-update" value="UPDATE">
                   </div>
                 </fieldset>
-              </form> -->
-
+              </form>
             </article>
           </div>
 

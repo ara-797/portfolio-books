@@ -159,7 +159,8 @@
 						align-items: center;
 						margin-top: 20px;
 
-						input {
+						input,
+						button {
 							font-size: 14px;
 							color: orange;
 							cursor: pointer;
@@ -168,11 +169,11 @@
 								margin-left: 20px;
 							}
 
-							&.btn-update {
+							&.btn-review-update {
 								color: #2ba9a9;
 							}
 
-							&.btn-delete {
+							&.btn-review-delete {
 								color: #ca3034;
 							}
 						}
