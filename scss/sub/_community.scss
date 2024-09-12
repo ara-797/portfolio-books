@@ -76,6 +76,11 @@
 						&.btn-write {
 							background: #4eb3b3;
 						}
+
+						&:disabled {
+							background: rgba(78, 179, 179, 0.5);
+							cursor: not-allowed;
+						}
 					}
 				}
 			}
@@ -110,7 +115,7 @@
 						margin-bottom: 15px;
 					}
 
-					p {
+					p:not(.error) {
 						font-size: 15px;
 						font-weight: 300;
 						line-height: 1.5;

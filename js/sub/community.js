@@ -112,11 +112,13 @@ function changeReviewEdit(e) {
 		return;
 	}
 	e.target.closest('article').classList.add('edit');
+	btnInputSend.disabled = true;
 }
 
 // 리뷰 수정화면 취소
 function cancelReviewEdit(e) {
 	e.target.closest('article').classList.remove('edit');
+	btnInputSend.disabled = false;
 	reviewListDOM(localData);
 }
 
@@ -131,6 +133,7 @@ function deleteReview(e) {
 // Update 리뷰
 function updateReview(e) {
 	e.preventDefault();
+	if (!e.validate) return;
 
 	const currentForm = e.target.closest('.form-community-update');
 	const bookname = currentForm.querySelector('.book-name-update').value;
@@ -144,5 +147,6 @@ function updateReview(e) {
 	});
 	localStorage.setItem('review', JSON.stringify(localData));
 	getLocalData();
+	btnInputSend.disabled = false;
 	reviewListDOM(localData);
 }

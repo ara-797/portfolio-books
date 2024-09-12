@@ -64,6 +64,25 @@ function communityInputValidate() {
 	});
 }
 
+// Community update Form
+document.body.addEventListener('click', (e) => {
+	if (e.target.className === 'btn-review-update') communityUpdateValidate(e);
+});
+
+function communityUpdateValidate(e) {
+	const formCommunityUpdate = document.querySelector('.form-community-update');
+	e.validate = true;
+
+	if (!isText(formCommunityUpdate, 'booknameUpdate', 1, '도서명을 입력하세요.')) {
+		e.preventDefault();
+		e.validate = false;
+	}
+	if (!isText(formCommunityUpdate, 'contentUpdate', 1, '도서에 관련된 내용을 자유롭게 작성하세요.')) {
+		e.preventDefault();
+		e.validate = false;
+	}
+}
+
 // [Text Validation]
 function isText(form, name, length, errMsg) {
 	const input = form.querySelector(`[name=${name}]`);
