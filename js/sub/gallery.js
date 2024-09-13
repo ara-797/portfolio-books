@@ -28,9 +28,6 @@ async function fetchData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 
-		galleryWrap.classList.add('on');
-		loadingWrap.classList.add('off');
-
 		if (!data.photos.photo.length) {
 			alert('해당 검색어의 결과가 없습니다.');
 			return;
@@ -70,4 +67,32 @@ function createList(arr) {
 	});
 
 	galleryWrap.innerHTML = tags;
+	setImgLoading();
+}
+
+// Set Image Loading
+function setImgLoading() {
+	const imgArr = galleryWrap.querySelectorAll('.profile-img');
+	let count = 0;
+
+	for (const img of imgArr) {
+		img.onerror = () => {
+			// 프로필 이미지 에러 처리
+			img.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+		};
+		img.onload = () => {
+			count++;
+			count === imgArr.length && isoLayout();
+		};
+	}
+}
+
+// Isotope 라이브러리
+function isoLayout() {
+	new Isotope(galleryWrap, {
+		itemSelector: '.item',
+		transitionDuration: '0.2s',
+	});
+	galleryWrap.classList.add('on');
+	loadingWrap.classList.add('off');
 }
