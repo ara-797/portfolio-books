@@ -1,6 +1,6 @@
 // Flickr 메서드별 URL 생성
 const api_key = 'c398e50bf254448c674eccddf24cb43e';
-const user_id = '201493781@N08';
+const userId = '201493781@N08';
 const limit = 30;
 
 function setUrl(type, option) {
@@ -29,6 +29,8 @@ async function fetchData(url) {
 		const data = await response.json();
 
 		if (!data.photos.photo.length) {
+			galleryWrap.classList.add('on');
+			loadingWrap.classList.add('off');
 			alert('해당 검색어의 결과가 없습니다.');
 			return;
 		}
@@ -96,3 +98,36 @@ function isoLayout() {
 	galleryWrap.classList.add('on');
 	loadingWrap.classList.add('off');
 }
+
+// 이미지 검색
+const inputSearch = document.querySelector('#search');
+const btnSearch = document.querySelector('.btn-search');
+
+btnSearch.addEventListener('click', onSearchImg);
+
+function onSearchImg() {
+	const inputVal = inputSearch.value.trim();
+
+	if (inputVal === '') {
+		alert('검색어를 입력해주세요.');
+		return;
+	}
+	fetchData(setUrl('search', inputVal));
+	inputSearch.value = '';
+}
+
+// 이미지 데이터 조회 (버튼 클릭)
+const btnInterest = document.querySelector('.option-interest');
+const btnBook = document.querySelector('.option-book');
+
+btnInterest.addEventListener('click', () => fetchData(setUrl('interest')));
+btnBook.addEventListener('click', () => fetchData(setUrl('user', userId)));
+inputSearch.addEventListener('keypress', (e) => {
+	e.code === 'Enter' && onSearchImg();
+});
+
+// 이벤트 위임
+document.body.addEventListener('click', (e) => {
+	if (e.target.className === 'profile-img') fetchData(setUrl('user', e.target.getAttribute('alt')));
+	if (e.target.className === 'profile-user') fetchData(setUrl('user', e.target.innerText));
+});
