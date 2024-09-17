@@ -74,7 +74,7 @@ function createList(arr) {
 
 // Set Image Loading
 function setImgLoading() {
-	const imgArr = galleryWrap.querySelectorAll('.profile-img');
+	const imgArr = galleryWrap.querySelectorAll('img');
 	let count = 0;
 
 	for (const img of imgArr) {
