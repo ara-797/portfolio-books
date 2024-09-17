@@ -144,6 +144,8 @@ function createPop(img) {
 				</div>
 			</div>
 
+			<div class="loading-wrap">LOADING...</div>
+
       <button type="button" class="pop-close">
         <i class="fa-solid fa-circle-xmark"></i>
       </button>
@@ -157,9 +159,27 @@ function createPop(img) {
 
 	setTimeout(() => {
 		document.querySelector('.pop-wrap').classList.add('on');
-	}, 0);
-
+	}, 100);
 	document.body.style.overflow = 'hidden';
+
+	// popup Loading
+	const frame = pop.querySelector('.inner-content');
+	const popLoading = pop.querySelector('.loading-wrap');
+	const imgArr = frame.querySelectorAll('img');
+	let count = 0;
+
+	frame.classList.remove('on');
+	popLoading.classList.remove('off');
+
+	for (const img of imgArr) {
+		img.onload = () => {
+			count++;
+			if (count === imgArr.length) {
+				frame.classList.add('on');
+				popLoading.classList.add('off');
+			}
+		};
+	}
 }
 
 // popup 제거
