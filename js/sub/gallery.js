@@ -130,4 +130,45 @@ inputSearch.addEventListener('keypress', (e) => {
 document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'profile-img') fetchData(setUrl('user', e.target.getAttribute('alt')));
 	if (e.target.className === 'profile-user') fetchData(setUrl('user', e.target.innerText));
+	if (e.target.className === 'picture') createPop(e.target.getAttribute('alt'));
+	if (e.target.closest('.pop-close')) removePop();
 });
+
+// 이미지 상세 create popup
+function createPop(img) {
+	const tags = `
+		<div class="inner-pop">
+      <div class="inner-content">
+				<div class="media-box">
+					<img src="${img}" alt="">
+				</div>
+			</div>
+
+      <button type="button" class="pop-close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+	`;
+
+	const pop = document.createElement('aside');
+	pop.className = 'pop-wrap';
+	pop.innerHTML = tags;
+	document.body.append(pop);
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').classList.add('on');
+	}, 0);
+
+	document.body.style.overflow = 'hidden';
+}
+
+// popup 제거
+function removePop() {
+	document.querySelector('.pop-wrap').classList.remove('on');
+
+	setTimeout(() => {
+		document.querySelector('.pop-wrap').remove();
+	}, 400);
+
+	document.body.style.overflow = 'auto';
+}
