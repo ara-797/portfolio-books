@@ -2,10 +2,15 @@
 const userId = '116867808673658431449';
 const shelf = '1001';
 const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
+const loadingWrap = document.querySelector('.loading-wrap');
+const mainWrap = document.querySelector('#main-visual');
 
 fetchListData(listUrl);
 
 async function fetchListData(url) {
+	loadingWrap.classList.remove('off');
+	mainWrap.classList.remove('load');
+
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
@@ -98,7 +103,24 @@ function createDOM(arr) {
     `;
 
 		visualPanel.innerHTML = tags;
+		setImgLoading();
 	});
+}
+
+// Set Image Loading
+function setImgLoading() {
+	const imgArr = visualPanel.querySelectorAll('img');
+	let count = 0;
+
+	for (const img of imgArr) {
+		img.onload = () => {
+			count++;
+			if (count === imgArr.length) {
+				loadingWrap.classList.add('off');
+				mainWrap.classList.add('load');
+			}
+		};
+	}
 }
 
 // 도서 상세 create popup

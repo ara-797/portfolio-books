@@ -42,6 +42,12 @@ $slideLength: 5;
 		overflow: hidden;
 		position: relative;
 
+		opacity: 0;
+		transform: translateY(200px);
+		transition-property: opacity, transform;
+		transition-duration: 0.5s;
+		transition-delay: 0.2s;
+
 		.panel {
 			width: calc(100% * $slideLength);
 			height: 100%;
@@ -281,6 +287,13 @@ $slideLength: 5;
 				}
 			}
 		}
+	}
+}
+
+#main-visual.load {
+	.slide-wrap {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
