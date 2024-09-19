@@ -25,27 +25,54 @@ $slideWidth: 220px;
 				margin-top: 15px;
 			}
 
-			.arrow {
+			.indicator {
 				display: flex;
 				align-items: center;
-				gap: 10px;
 				margin-top: 35px;
 
-				> button {
+				.btn-arrow {
 					display: flex;
-					justify-content: center;
 					align-items: center;
-					width: 35px;
-					height: 35px;
-					cursor: pointer;
+					gap: 10px;
+					margin-right: 20px;
 
-					&.prev {
+					> button {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 35px;
+						height: 35px;
 						background: #d7d7d7;
 						color: #333;
+						cursor: pointer;
 					}
-					&.next {
-						background: #333;
-						color: #d7d7d7;
+				}
+
+				.btn-controls {
+					display: flex;
+					align-items: center;
+
+					button {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						border: 2px solid #333;
+						font-size: 13px;
+						color: #333;
+						cursor: pointer;
+						transition: 0.2s;
+
+						&:not(:first-child) {
+							margin-left: 10px;
+						}
+
+						&.on {
+							background: #333;
+							color: white;
+						}
 					}
 				}
 			}

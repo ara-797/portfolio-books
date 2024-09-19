@@ -82,29 +82,57 @@ $slideWidth: 500px;
 				}
 			}
 
-			.arrow {
+			.indicator {
 				position: absolute;
 				bottom: 0;
-				left: calc($mainContainer - 80px);
+				left: calc($mainContainer - 180px);
 				display: flex;
 				align-items: center;
-				gap: 10px;
+				z-index: 1;
 
-				> button {
+				.btn-arrow {
 					display: flex;
-					justify-content: center;
 					align-items: center;
-					width: 35px;
-					height: 35px;
-					cursor: pointer;
+					gap: 10px;
+					margin-right: 20px;
 
-					&.prev {
+					> button {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 35px;
+						height: 35px;
 						background: #d7d7d7;
 						color: #333;
+						cursor: pointer;
 					}
-					&.next {
-						background: #333;
-						color: #d7d7d7;
+				}
+
+				.btn-controls {
+					display: flex;
+					align-items: center;
+
+					button {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						border: 2px solid #333;
+						font-size: 13px;
+						color: #333;
+						cursor: pointer;
+						transition: 0.2s;
+
+						&:not(:first-child) {
+							margin-left: 10px;
+						}
+
+						&.on {
+							background: #333;
+							color: white;
+						}
 					}
 				}
 			}
@@ -119,7 +147,7 @@ $slideWidth: 500px;
 			padding: 0 $responsePadding;
 
 			.slide-wrap {
-				.arrow {
+				.indicator {
 					left: auto;
 					right: 0;
 				}

@@ -244,6 +244,36 @@ $slideLength: 5;
 			right: 30px;
 			z-index: 1;
 
+			.btn-controls {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				margin-bottom: 20px;
+
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 35px;
+					height: 35px;
+					border-radius: 50%;
+					border: 2px solid #333;
+					font-size: 13px;
+					color: #333;
+					cursor: pointer;
+					transition: 0.2s;
+
+					&:not(:first-child) {
+						margin-left: 10px;
+					}
+
+					&.on {
+						background: #333;
+						color: white;
+					}
+				}
+			}
+
 			.current-number {
 				font-family: 'Noto Serif KR';
 				font-size: 20px;
