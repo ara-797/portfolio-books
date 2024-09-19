@@ -3,13 +3,15 @@ const userId = '116867808673658431449';
 const shelf = '1001';
 const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes`;
 const loadingWrap = document.querySelector('.loading-wrap');
-const mainWrap = document.querySelector('#main-visual');
+const visualWrap = document.querySelector('#main-visual');
+const bookListWrap = document.querySelector('#main-book-list');
 
 fetchListData(listUrl);
 
 async function fetchListData(url) {
 	loadingWrap.classList.remove('off');
-	mainWrap.classList.remove('load');
+	visualWrap.classList.remove('load');
+	bookListWrap.classList.remove('load');
 
 	try {
 		const response = await fetch(url);
@@ -117,7 +119,8 @@ function setImgLoading() {
 			count++;
 			if (count === imgArr.length) {
 				loadingWrap.classList.add('off');
-				mainWrap.classList.add('load');
+				visualWrap.classList.add('load');
+				bookListWrap.classList.add('load');
 			}
 		};
 	}

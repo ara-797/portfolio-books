@@ -55,6 +55,12 @@ $slideWidth: 220px;
 			flex: 1;
 			overflow: hidden;
 
+			opacity: 0;
+			transform: translateY(200px);
+			transition-property: opacity, transform;
+			transition-duration: 0.5s;
+			transition-delay: 0.2s;
+
 			.panel {
 				width: calc($slideWidth * $slideLength);
 				display: flex;
@@ -110,6 +116,13 @@ $slideWidth: 220px;
 				}
 			}
 		}
+	}
+}
+
+#main-book-list.load {
+	.slide-wrap {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
