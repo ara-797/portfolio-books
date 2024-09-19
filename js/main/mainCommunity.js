@@ -46,7 +46,29 @@ const swiper = new Swiper('.communityListSwiper', {
 		nextEl: '#btnNextCommunity',
 		prevEl: '#btnPrevCommunity',
 	},
+	loop: true,
 	autoplay: {
-		delay: 2500,
+		delay: 5000,
 	},
 });
+
+// 이벤트 위임
+const btnCommunityPlay = document.querySelector('#btnCommunityPlay');
+const btnCommunityStop = document.querySelector('#btnCommunityStop');
+
+document.body.addEventListener('click', (e) => {
+	if (e.target.closest('#btnCommunityPlay')) swiperPlay();
+	if (e.target.closest('#btnCommunityStop')) swiperStop();
+});
+
+function swiperPlay() {
+	swiper.autoplay.start();
+	btnCommunityPlay.classList.add('on');
+	btnCommunityStop.classList.remove('on');
+}
+
+function swiperStop() {
+	swiper.autoplay.stop();
+	btnCommunityPlay.classList.remove('on');
+	btnCommunityStop.classList.add('on');
+}
