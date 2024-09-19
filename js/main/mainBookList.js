@@ -26,17 +26,6 @@ async function fetchDetailData(url) {
 	}
 }
 
-// 이벤트 위임 - 도서 상세 팝업
-document.body.addEventListener('click', (e) => {
-	if (e.target.closest('.btnDetailBook')) {
-		const detailUrl = `https://www.googleapis.com/books/v1/volumes/${
-			e.target.closest('.btnDetailBook').dataset.detail
-		}`;
-		fetchDetailData(detailUrl);
-	}
-	if (e.target.closest('.pop-close.book-list')) removePop();
-});
-
 // 도서 슬라이드 create DOM
 const bookListPanel = document.querySelector('#bookListPanel');
 
@@ -150,4 +139,37 @@ const swiper = new Swiper('.bookListSwiper', {
 		nextEl: '#btnNextBook',
 		prevEl: '#btnPrevBook',
 	},
+	loop: true,
+	autoplay: {
+		delay: 5000,
+	},
 });
+
+// 이벤트 위임
+const btnBookListPlay = document.querySelector('#btnBookListPlay');
+const btnBookListStop = document.querySelector('#btnBookListStop');
+
+document.body.addEventListener('click', (e) => {
+	if (e.target.closest('.btnDetailBook')) {
+		const detailUrl = `https://www.googleapis.com/books/v1/volumes/${
+			e.target.closest('.btnDetailBook').dataset.detail
+		}`;
+		fetchDetailData(detailUrl);
+		swiperStop();
+	}
+	if (e.target.closest('.pop-close.book-list')) removePop();
+	if (e.target.closest('#btnBookListPlay')) swiperPlay();
+	if (e.target.closest('#btnBookListStop')) swiperStop();
+});
+
+function swiperPlay() {
+	swiper.autoplay.start();
+	btnBookListPlay.classList.add('on');
+	btnBookListStop.classList.remove('on');
+}
+
+function swiperStop() {
+	swiper.autoplay.stop();
+	btnBookListPlay.classList.remove('on');
+	btnBookListStop.classList.add('on');
+}
