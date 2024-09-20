@@ -46,7 +46,6 @@ const swiper = new Swiper('.communityListSwiper', {
 		nextEl: '#btnNextCommunity',
 		prevEl: '#btnPrevCommunity',
 	},
-	loop: true,
 	autoplay: {
 		delay: 5000,
 	},

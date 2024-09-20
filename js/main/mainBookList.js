@@ -139,9 +139,8 @@ const swiper = new Swiper('.bookListSwiper', {
 		nextEl: '#btnNextBook',
 		prevEl: '#btnPrevBook',
 	},
-	loop: true,
 	autoplay: {
-		delay: 5000,
+		delay: 1500,
 	},
 });
 
