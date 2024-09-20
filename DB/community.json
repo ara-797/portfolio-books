@@ -1,34 +1,44 @@
 {
   "communityList": [
     {
+      "seq": 0,
+      "username": "Woo ara",
       "profileImg": "example_user1.jpg",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
-      "name": "Sara Kim",
-      "date": "2023.06.17"
+      "bookname": "소크라테스 익스프레스",
+      "content": "“인생에서 길을 잃는 수많은 순간마다 이 철학자들의 목소리가 들려올 것이다” 《소크라테스 익스프레스》는 마르쿠스 아우렐리우스부터 몽테뉴까지 역사상 가장 위대한 철학자들을 만나러 떠나는 여행기이자, 그들의 삶과 작품 속의 지혜가 우리 인생을 개선하는 데 어떻게 도움이 되는지 답을 찾아가는 책이다.",
+      "createAt": "2024.09.20 2:57:23 pm"
     },
     {
+      "seq": 1,
+      "username": "Woo ara",
       "profileImg": "example_user2.jpg",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
-      "name": "Emily Simpson",
-      "date": "2023.06.18"
+      "bookname": "디즈니 프린세스, 내일의 너는 더 빛날 거야",
+      "content": "인생의 과정에 서 있는 우리에게, 디즈니 프린세스 시리즈 속 빛나는 주인공들이 건네는 위로와 용기의 메시지",
+      "createAt": "2024.09.20 2:57:23 pm"
     },
     {
+      "seq": 2,
+      "username": "Woo ara",
       "profileImg": "example_user3.jpg",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
-      "name": "Paul Davison",
-      "date": "2023.06.19"
+      "bookname": "인간",
+      "content": "불가해한 환경과 맞닥뜨린 두 사람이 자신들에게 닥친 상황을 이해하려 노력하는 모습을 통해 베르베르는 인간이란 과연 어떠한 가치를 지니는 존재인지를 진지하게 묻고 있다.",
+      "createAt": "2024.09.20 2:57:23 pm"
     },
     {
+      "seq": 3,
+      "username": "Woo ara",
       "profileImg": "example_user1.jpg",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
-      "name": "Sara Kim",
-      "date": "2023.06.20"
+      "bookname": "도둑맞은 집중력",
+      "content": "전 세계 모든 곳에서, 집중하는 우리의 능력은 붕괴하고 있다. 미국의 10대들은 한 가지 일에 65초 이상 집중하지 못한다. 직장인들의 평균 집중 시간은 단 3분에 불과하다.",
+      "createAt": "2024.09.20 2:57:23 pm"
     },
     {
+      "seq": 4,
+      "username": "Woo ara",
       "profileImg": "example_user3.jpg",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus exercitationem culpa saepe, nulla veniam aliquam. Ea dicta officia dolorum.",
-      "name": "Paul Davison",
-      "date": "2023.06.21"
+      "bookname": "노 필터",
+      "content": "처음 만난 사람과 인사 후에 트위터나 페이스북 주소를 서로 묻던 때가 있었다. 지금은 인스타그램을 하냐는 질문이 이를 대신한다. 계정에 들어가면 필터를 입힌 세련된 사진 틈에서 상대의 취향을 한눈에 알아차릴 수 있다. 상대가 좋아하는 것들과 관련된 동영상도 올라온다. 팔로하는 사람이 판매하는 제품을 구입하거나 이벤트에 참여하는 것도 이제는 일상이다.",
+      "createAt": "2024.09.20 2:57:23 pm"
     }
   ]
 }

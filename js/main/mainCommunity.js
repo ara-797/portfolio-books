@@ -24,9 +24,10 @@ function createDOM(items) {
           <img src="assets/images/community/${item.profileImg}" alt="">
         </div>
         <div class="info-box">
+					<p class="book">${item.bookname}</p>
           <p>${item.content}</p>
-          <p class="user">${item.name}</p>
-          <p>${item.date}</p>
+          <p class="user">${item.username}</p>
+          <p>${item.createAt}</p>
         </div>
       </div>
     `;
