@@ -26,7 +26,7 @@ function reviewListDOM(arr) {
 
 						<div class="info-wrap">
 							<div class="profile-box">
-								<img src="assets/images/community/example_user1.jpg" alt="">
+								<img src="assets/images/community/blank_user.png" alt="">
 							</div>
 							<div class="info-box">
 								<p class="user">${item.username}</p>
