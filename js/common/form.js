@@ -3,8 +3,18 @@ const formContact = document.querySelector('#formContact');
 formContact && contactValidate();
 
 function contactValidate() {
-	const btnSend = formContact.querySelector('input[type=submit]');
+	// Input Event - Debouncing (유효성 검사)
+	let eventBlocker = null;
+	formContact.addEventListener('input', () => {
+		clearTimeout(eventBlocker);
+		eventBlocker = setTimeout(() => {
+			isText(formContact, 'username', 2, '이름은 2글자 이상 입력하세요.');
+			isText(formContact, 'message', 5, '문의사항은 5글자 이상 입력하세요.');
+			isEmail(formContact, 'email');
+		}, 300);
+	});
 
+	const btnSend = formContact.querySelector('input[type=submit]');
 	btnSend.addEventListener('click', (e) => {
 		if (!isText(formContact, 'username', 2, '이름은 2글자 이상 입력하세요.')) e.preventDefault();
 		if (!isText(formContact, 'message', 5, '문의사항은 5글자 이상 입력하세요.')) e.preventDefault();
@@ -17,8 +27,22 @@ const formSignup = document.querySelector('#formSignup');
 formSignup && signupValidate();
 
 function signupValidate() {
-	const btnSend = formSignup.querySelector('input[type=submit]');
+	// Input Event - Debouncing (유효성 검사)
+	let eventBlocker = null;
+	formSignup.addEventListener('input', () => {
+		clearTimeout(eventBlocker);
+		eventBlocker = setTimeout(() => {
+			isEmail(formSignup, 'email');
+			isPassword(formSignup, 'pwd1', 5);
+			isRePassword(formSignup, 'pwd1', 'pwd2');
+			isSelect(formSignup, 'library');
+			isCheck(formSignup, 'gender');
+			isCheck(formSignup, 'genre');
+			isText(formSignup, 'memo', 5, '메모는 5글자 이상 입력하세요.');
+		}, 300);
+	});
 
+	const btnSend = formSignup.querySelector('input[type=submit]');
 	btnSend.addEventListener('click', (e) => {
 		if (!isEmail(formSignup, 'email')) e.preventDefault();
 		if (!isPassword(formSignup, 'pwd1', 5)) e.preventDefault();
@@ -35,8 +59,17 @@ const formSignin = document.querySelector('#formSignin');
 formSignin && signinValidate();
 
 function signinValidate() {
-	const btnSend = formSignin.querySelector('input[type=submit]');
+	// Input Event - Debouncing (유효성 검사)
+	let eventBlocker = null;
+	formSignin.addEventListener('input', () => {
+		clearTimeout(eventBlocker);
+		eventBlocker = setTimeout(() => {
+			isEmail(formSignin, 'email');
+			isPassword(formSignin, 'pwd', 5);
+		}, 300);
+	});
 
+	const btnSend = formSignin.querySelector('input[type=submit]');
 	btnSend.addEventListener('click', (e) => {
 		if (!isEmail(formSignin, 'email')) e.preventDefault();
 		if (!isPassword(formSignin, 'pwd', 5)) e.preventDefault();
@@ -48,8 +81,17 @@ const formCommunityInput = document.querySelector('#formCommunityInput');
 formCommunityInput && communityInputValidate();
 
 function communityInputValidate() {
-	const btnSend = formCommunityInput.querySelector('input[type=submit]');
+	// Input Event - Debouncing (유효성 검사)
+	let eventBlocker = null;
+	formCommunityInput.addEventListener('input', () => {
+		clearTimeout(eventBlocker);
+		eventBlocker = setTimeout(() => {
+			isText(formCommunityInput, 'bookname', 1, '도서명을 입력하세요.');
+			isText(formCommunityInput, 'content', 1, '도서에 관련된 내용을 자유롭게 작성하세요.');
+		}, 300);
+	});
 
+	const btnSend = formCommunityInput.querySelector('input[type=submit]');
 	btnSend.addEventListener('click', (e) => {
 		e.validate = true;
 
