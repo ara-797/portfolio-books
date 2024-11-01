@@ -1,7 +1,8 @@
 // 도서 목록 조회 (Books API)
 const userId = '116867808673658431449';
 const shelf = '1002';
-const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=10`;
+const key = 'AIzaSyDeATfHBJJkjLPQmF_ePSuyuMaBGD_DipE';
+const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=10&key=${key}`;
 
 fetchListData(listUrl);
 

@@ -1,17 +1,18 @@
 // 도서 목록 조회 (Books API)
 const userId = '116867808673658431449';
 const shelf = '1001';
-const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=5`;
+const key = 'AIzaSyDeATfHBJJkjLPQmF_ePSuyuMaBGD_DipE';
+const listUrl = `https://www.googleapis.com/books/v1/users/${userId}/bookshelves/${shelf}/volumes?maxResults=5&key=${key}`;
 const loadingWrap = document.querySelector('.loading-wrap');
 const visualWrap = document.querySelector('#main-visual');
-// const bookListWrap = document.querySelector('#main-book-list');
+const bookListWrap = document.querySelector('#main-book-list');
 
 fetchListData(listUrl);
 
 async function fetchListData(url) {
 	loadingWrap.classList.remove('off');
 	visualWrap.classList.remove('load');
-	// bookListWrap.classList.remove('load');
+	bookListWrap.classList.remove('load');
 
 	try {
 		const response = await fetch(url);
@@ -111,7 +112,7 @@ function setImgLoading() {
 			if (count === imgArr.length) {
 				loadingWrap.classList.add('off');
 				visualWrap.classList.add('load');
-				// bookListWrap.classList.add('load');
+				bookListWrap.classList.add('load');
 			}
 		};
 	}
